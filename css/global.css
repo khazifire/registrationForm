@@ -1,0 +1,38 @@
+/* ++++++++++++++++++++++++++++++++++++
+#navbar and footer
+++++++++++++++++++++++++++++++++++++ */
+*{
+    margin: 0;
+    padding: 0;
+}
+.navbar {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(250, 249, 249);
+    overflow: hidden;
+}
+
+.navbar a {
+    float: left;
+    color: #1d1c1c;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 1.4em;
+}
+
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+.navbar a.active {
+    background-color: #182762;
+    color: white;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    font-size: 1.4em;
+    height: 30px;
+}
