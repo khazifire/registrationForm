@@ -9,7 +9,6 @@
     <p >By khazifire.com &copy 2021</p>
 </footer>
 
-</style>
 </body>
 </html>
 
