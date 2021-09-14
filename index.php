@@ -46,7 +46,7 @@ if ($first_name && $last_name && $student_id && $email && $gender && $phone_numb
         $_SESSION['gender'] =$gender;
         $_SESSION['phone_number'] = $phone_number;
         $_SESSION['username'] = $username;
-        $_SESSION['password'] = sha1($password);
+        $_SESSION['password'] = sha1($password);   //to hash the password
         header("Location: processForm.php");
         exit;
     }

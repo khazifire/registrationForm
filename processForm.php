@@ -42,42 +42,42 @@
                     $time = time();
                     $timestamp = date("Y-m-d H:i:s", $time);
 
-                    // $sql1 = "CREATE TABLE IF NOT EXISTS UserDetails(
-                    //     registration_id INT AUTO_INCREMENT PRIMARY KEY,
-                    //     student_id VARCHAR(10) NOT NULL,
-                    //     first_name VARCHAR(30) NOT NULL,
-                    //     last_name VARCHAR(30) NOT NULL,
-                    //     gender VARCHAR(6) NOT NULL,
-                    //     email VARCHAR(30) NOT NULL,
-                    //     phone_number VARCHAR(15)
-                    //     ) AUTO_INCREMENT=1001 ";
-
-                    // $sql2 = "CREATE TABLE IF NOT EXISTS UserAccounts(
-                    //     registration_id INT AUTO_INCREMENT PRIMARY KEY,
-                    //     Acc_username VARCHAR(15) NOT NULL  ,
-                    //     Acc_password VARCHAR(40) NOT NULL,
-                    //     Acc_timestamp DATE NOT NULL,
-                    //     CONSTRAINT `fk_User_Details` FOREIGN KEY (registration_id) 
-                    //     REFERENCES UserDetails(registration_id) ON DELETE CASCADE ON UPDATE CASCADE
-                    // ) AUTO_INCREMENT=1001
-                    // ";
-
-                    // $sql3 = "CREATE TABLE IF NOT EXISTS UserRoles(
-                    //     registration_id INT AUTO_INCREMENT PRIMARY KEY ,
-                    //     Role_name VARCHAR(30) DEFAULT 'Student',
-                    //     Acc_username VARCHAR(15) NOT NULL, 
-                    //     CONSTRAINT `fk_User_Accounts` FOREIGN KEY (registration_id) 
-                    //     REFERENCES UserAccounts(registration_id) ON DELETE CASCADE ON UPDATE CASCADE
-                    // ) AUTO_INCREMENT=1001";
+//                     $sql1 = "CREATE TABLE IF NOT EXISTS UserDetails(
+//                         registration_id INT AUTO_INCREMENT PRIMARY KEY,
+//                         student_id VARCHAR(10) NOT NULL,
+//                         first_name VARCHAR(30) NOT NULL,
+//                         last_name VARCHAR(30) NOT NULL,
+//                         gender VARCHAR(6) NOT NULL,
+//                         email VARCHAR(30) NOT NULL,
+//                         phone_number VARCHAR(15)
+//                         ) AUTO_INCREMENT=1001 ";
+//
+//                     $sql2 = "CREATE TABLE IF NOT EXISTS UserAccounts(
+//                         registration_id INT AUTO_INCREMENT PRIMARY KEY,
+//                         Acc_username VARCHAR(15) NOT NULL  ,
+//                         Acc_password VARCHAR(40) NOT NULL,
+//                         Acc_timestamp DATE NOT NULL,
+//                         CONSTRAINT `fk_User_Details` FOREIGN KEY (registration_id)
+//                         REFERENCES UserDetails(registration_id) ON DELETE CASCADE ON UPDATE CASCADE
+//                     ) AUTO_INCREMENT=1001
+//                     ";
+//
+//                     $sql3 = "CREATE TABLE IF NOT EXISTS UserRoles(
+//                         registration_id INT AUTO_INCREMENT PRIMARY KEY ,
+//                         Role_name VARCHAR(30) DEFAULT 'Student',
+//                         Acc_username VARCHAR(15) NOT NULL,
+//                         CONSTRAINT `fk_User_Accounts` FOREIGN KEY (registration_id)
+//                         REFERENCES UserAccounts(registration_id) ON DELETE CASCADE ON UPDATE CASCADE
+//                     ) AUTO_INCREMENT=1001";
   //student (with use this form)---- staff and faculty another form
 
-                    $sql1 = "INSERT INTO `u265455877_khazifire`.`UserDetails`(first_name, last_name, student_id,gender, email, phone_number) 
+                    $sql1 = "INSERT INTO `u265455877_khazifire`.`UserDetails`(first_name, last_name, student_id,gender, email, phone_number)
                              VALUES ('$first_name','$last_name','$student_id','$gender','$email', '$phone_number');";
 
-                    $sql2 = "INSERT INTO `u265455877_khazifire`.`UserAccounts`(Acc_username,Acc_password,Acc_timestamp) 
+                    $sql2 = "INSERT INTO `u265455877_khazifire`.`UserAccounts`(Acc_username,Acc_password,Acc_timestamp)
                              VALUES ('$username','$password','$timestamp')";
 
-                    $sql3 = "INSERT INTO `u265455877_khazifire`.`UserRoles`(Role_name,Acc_username) 
+                    $sql3 = "INSERT INTO `u265455877_khazifire`.`UserRoles`(Role_name,Acc_username)
                              VALUES ('$role','$username')";
                     
                 
@@ -96,9 +96,10 @@
                     }
 
                     if(mysqli_query($conn,$sql3) && $status==True){
-                        echo "<h3> Congratulation <strong>{$first_name $last_name}</strong>, your registration was successful, a confirmation email will be sent to {$email}</h3>";
+                        echo "<h3> Congratulation <strong>{$first_name} {$last_name}</strong>, your registration was successful, a confirmation email will be sent to {$email}</h3>";
                     } else{
                         echo "<h3>Registration failed please <a href='index.php'>try again</a></h3>";
+
                     }
                 }
                 mysqli_close($conn);  
