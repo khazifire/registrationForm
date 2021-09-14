@@ -46,7 +46,8 @@ if ($first_name && $last_name && $student_id && $email && $gender && $phone_numb
         $_SESSION['gender'] =$gender;
         $_SESSION['phone_number'] = $phone_number;
         $_SESSION['username'] = $username;
-        header("Location: successMessage.php");
+        $_SESSION['password'] = sha1($password);
+        header("Location: processForm.php");
         exit;
     }
 }
@@ -206,7 +207,16 @@ function password_valid($password) {
                     </fieldset>
                         
                 
-                        <?php if (!empty($errors)){ foreach ($errors as $error)echo "<div class='error-message' style='color: red;'> ** $error</div>";} ?>
+                        <?php
+                            if (!empty($errors)){
+                                if(count($errors)>=3){
+                                    echo "<div class='error-message' style='color: red;'> ** All fields should be completed </div>";
+                                }else{
+                                    foreach ($errors as $error) {
+                                        echo "<div class='error-message' style='color: red;'> * $error</div>";
+                                    }
+                                }}
+                        ?>
 
                         <div class="p-t-15">
                             <button class="btn btn--radius-2 btn--blue" type="submit" name="submit" >Submit</button>
