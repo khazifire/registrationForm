@@ -186,7 +186,8 @@ function password_valid($password) {
                                 <div class="input-group">
                                     <label class="label" >Username <span class="required-sign" style='color: red;'>*</span></label>
                                     <input class="input--style-4" type="text" name="username" value="<?php echo $username?>" >
-
+                                    
+                                   
                                 </div>
                         </div>
                         <div class="row row-space">

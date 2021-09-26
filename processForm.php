@@ -53,6 +53,7 @@
 //                         ) AUTO_INCREMENT=1001 ";
 //
 //                     $sql2 = "CREATE TABLE IF NOT EXISTS UserAccounts(
+                    //Acc_id int(5)
 //                         registration_id INT AUTO_INCREMENT PRIMARY KEY,
 //                         Acc_username VARCHAR(15) NOT NULL  ,
 //                         Acc_password VARCHAR(40) NOT NULL,
@@ -71,14 +72,14 @@
 //                     ) AUTO_INCREMENT=1001";
   //student (with use this form)---- staff and faculty another form
 
-                    $sql1 = "INSERT INTO `u265455877_khazifire`.`UserDetails`(first_name, last_name, student_id,gender, email, phone_number)
-                             VALUES ('$first_name','$last_name','$student_id','$gender','$email', '$phone_number');";
-
-                    $sql2 = "INSERT INTO `u265455877_khazifire`.`UserAccounts`(Acc_username,Acc_password,Acc_timestamp)
-                             VALUES ('$username','$password','$timestamp')";
-
-                    $sql3 = "INSERT INTO `u265455877_khazifire`.`UserRoles`(Role_name,Acc_username)
-                             VALUES ('$role','$username')";
+//                    $sql1 = "INSERT INTO `u265455877_khazifire`.`UserDetails`(first_name, last_name, student_id,gender, email, phone_number)
+//                             VALUES ('$first_name','$last_name','$student_id','$gender','$email', '$phone_number');";
+//
+//                    $sql2 = "INSERT INTO `u265455877_khazifire`.`UserAccounts`(Acc_username,Acc_password,Acc_timestamp)
+//                             VALUES ('$username','$password','$timestamp')";
+//
+//                    $sql3 = "INSERT INTO `u265455877_khazifire`.`UserRoles`(Role_name,Acc_username)
+//                             VALUES ('$role','$username')";
                     
                 
 
